@@ -1,2 +1,4 @@
+removed_sources:
+  kmidimon-0.7.4.tar.gz: 5384c756bb2d8e1847ec7b65981dfaa630ca10f8
 sources:
-  "kmidimon-0.7.4.tar.gz": 5384c756bb2d8e1847ec7b65981dfaa630ca10f8
+  kmidimon-0.7.4.tar.bz2: 1cea7301f500e2e0407ff9c58b8170fdbd76131c
