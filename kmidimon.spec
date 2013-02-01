@@ -1,6 +1,6 @@
 Name:		kmidimon
 Version:	0.7.4
-Release:	%mkrel 69.1
+Release:	%mkrel 1
 License:	GPLv2+ 
 Summary:	KDE MIDI Monitor for ALSA Sequencer
 # different group in different mdv version: to be fixed
@@ -77,6 +77,7 @@ gtk-update-icon-cache %{_datadir}/icons/hicolor &>/dev/null || :
 
 
 %changelog
-* Fri Feb 01 2013 Giovanni Mariani <mc2374@mclink.it> 0.7.4-69.1
+* Fri Feb 01 2013 Giovanni Mariani <mc2374@mclink.it> 0.7.4-1
 - Imported on Rosa 2012.1 from a MIB package
 - Fixed Source0 URL and archive type
+- Fixed %%release value
