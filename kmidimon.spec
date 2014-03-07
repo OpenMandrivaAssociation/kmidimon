@@ -50,5 +50,5 @@ desktop-file-install --vendor="" \
 		--remove-category Music \
 		--dir %{buildroot}%{_kde_applicationsdir} %{buildroot}%{_kde_applicationsdir}/%{name}.desktop
 
-%find_lang %{name} --with-html
+%find_lang %{name} --with-html --with-man
 
