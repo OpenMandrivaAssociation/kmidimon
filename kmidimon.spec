@@ -1,7 +1,7 @@
 Summary:	KDE MIDI Monitor for ALSA Sequencer
 Name:		kmidimon
 Version:	0.7.5
-Release:	1
+Release:	2
 License:	GPLv2+
 Group:		Sound
 Url:		http://kmetronome.sourceforge.net/kmidimon/
