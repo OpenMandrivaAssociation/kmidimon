@@ -1,22 +1,31 @@
 Summary:	KDE MIDI Monitor for ALSA Sequencer
 Name:		kmidimon
-Version:	0.7.5
-Release:	3
+Version:	0.7.6
+Release:	1
 License:	GPLv2+
 Group:		Sound
 Url:		http://kmetronome.sourceforge.net/kmidimon/
-Source0:	http://sourceforge.net/projects/kmidimon/files/%{version}/%{name}-%{version}.tar.bz2
+#Source0:	http://sourceforge.net/projects/kmidimon/files/%{version}/%{name}-%{version}.tar.bz2
+
+#Instead release, use latest git (git is still in active developing): https://sourceforge.net/p/kmidimon/code/HEAD/tree/trunk/
+# For easy to use git as source, use source mirror from here. They even create source package:
+Source0:	https://github.com/KottV/kmidimon/archive/v%{version}/%{name}-%{version}.tar.gz
+
+BuildRequires:	cmake
+BuildRequires:  qmake5
 BuildRequires:	desktop-file-utils
-BuildRequires:	gettext-devel
-BuildRequires:	kdelibs4-devel
-BuildRequires:	qt4-devel
-BuildRequires:	pkgconfig(alsa) >= 1.0.0
+BuildRequires:	gettext
+BuildRequires:	pkgconfig(alsa)
 BuildRequires:	pkgconfig(dbus-1)
-BuildRequires:	pkgconfig(drumstick-alsa) >= 0.5.0
+BuildRequires:	pkgconfig(drumstick-alsa)
 BuildRequires:	pkgconfig(libart-2.0)
 BuildRequires:	pkgconfig(x11)
-Requires:	drumstick >= 0.5.0
-Requires:	oxygen-icon-theme
+BuildRequires:	pkgconfig(Qt5Core)
+BuildRequires:	pkgconfig(Qt5DBus)
+BuildRequires:	pkgconfig(Qt5Help)
+BuildRequires:	pkgconfig(Qt5Svg)
+BuildRequires:	pkgconfig(Qt5Widgets)
+BuildRequires:  cmake(Qt5LinguistTools)
 
 %description
 KMidimon is a MIDI monitor for the ALSA sequencer, based on the drumstick
@@ -34,16 +43,15 @@ loaded from standard MIDI Files.
 #----------------------------------------------------------------------------
 
 %prep
-%setup -q
-# make sure that the bundled drumstick isn't used
-rm -rf drumstick
+%autosetup -p1
 
 %build
-%cmake_kde4
-%make
+%cmake
+
+%make_build
 
 %install
-%makeinstall_std -C build
+%make_install -C build
 
 desktop-file-install --vendor="" \
 		--add-category Application \
