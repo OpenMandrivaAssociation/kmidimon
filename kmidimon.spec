@@ -4,7 +4,7 @@ Version:	0.7.6
 Release:	1
 License:	GPLv2+
 Group:		Sound
-Url:		http://kmetronome.sourceforge.net/kmidimon/
+Url:		https://kmetronome.sourceforge.net/kmidimon/
 #Source0:	http://sourceforge.net/projects/kmidimon/files/%{version}/%{name}-%{version}.tar.bz2
 
 #Instead release, use latest git (git is still in active developing): https://sourceforge.net/p/kmidimon/code/HEAD/tree/trunk/
