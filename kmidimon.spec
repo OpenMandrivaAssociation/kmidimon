@@ -9,6 +9,7 @@ Source0:	http://sourceforge.net/projects/kmidimon/files/%{version}/%{name}-%{ver
 BuildRequires:		cmake >= 3.16
 BuildRequires:		desktop-file-utils
 BuildRequires:		gettext
+BuildRequires:		gzip-utils
 BuildRequires:		cmake(Qt6LinguistTools)
 BuildRequires:		pkgconfig(alsa)
 BuildRequires:		pkgconfig(dbus-1)
